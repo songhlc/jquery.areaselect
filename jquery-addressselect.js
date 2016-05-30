@@ -24,7 +24,8 @@
             },
             onok:function(selectedDatas){
                 alert(JSON.stringify(selectedDatas));
-            }
+            },
+            defaultFullname:""
         };
         var selectedDatas={
             ids:[],
@@ -152,6 +153,9 @@
                     '</div>'+
                     '</div>';
                 element.append(tpl);
+                if(settings.defaultFullname){
+                    element.find("input").val(settings.defaultFullname);
+                }
             }
             else{
                 console.log("error initData");

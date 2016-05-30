@@ -38,20 +38,31 @@
     <script src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
     <script src="jquery-addressselect.js"></script>
     <script >
+        var i = 0;
         $(".area-select").arealikeselect({
             initData:[{id:2,name:"ttt"},{id:3,name:"ggg"}],
             loadData:function(selectedData,callback){//selectedData={id:10,name:"ee"};
                 //use selectedData to queryajax
 //                ajax
 //                success:function()
-                callback([{id:2,name:"ttt"},{id:3,name:"ggg"}]);
+//                这里只是用来模拟到末级的情况,
+                if(i<3){
+                    i++;
+                    callback([{id:2,name:"ttt"},{id:3,name:"ggg"}]);
+                }
+                else{
+                    callback(null);
+                    i=0;
+                }
                 //callback(null) or callback([]) to stop choose to trigger onok function
             },
             onok:function(selectedDatas){
+                //do what u want return selecteddatas
                 alert(JSON.stringify(selectedDatas));
             },
             type:"input",//type 分为link 和 input两种
-            linktext:"请选择收货地区"
+            linktext:"请选择收货地区",
+            defaultFullname:"北京市海淀区北五环"
 
         });
     </script>
