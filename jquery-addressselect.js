@@ -7,7 +7,7 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *
  * Project home:
- *   https://github.com/songhlc/
+ *   https://github.com/songhlc/jquery.areaselect
  *
  * Version:  1.0.0
  *
