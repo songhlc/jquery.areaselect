@@ -21,6 +21,6 @@
 ###对应data数据格式(data format)
 
     var data = [
-		{id:2,name:"ttt"},{id:3,name:"ggg"},
-		{id:2,name:"ttt"},{id:3,name:"ggg"}
+		{id:2,name:"北京"},{id:5,name:"上海"},
+		{id:4,name:"天津"},{id:6,name:"成都"}
     ];
