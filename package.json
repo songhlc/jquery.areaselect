@@ -1,0 +1,17 @@
+{
+  "name": "jquery-areaselect",
+  "version": "1.0.0",
+  "description": "use for area and address select with a good operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"browser-sync start --server --files '*.*'"
+  },
+  "keywords": [
+    "jquery",
+    "areaselect",
+    "addressselect"
+  ],
+  "author": "songhlc",
+  "license": "ISC"
+}

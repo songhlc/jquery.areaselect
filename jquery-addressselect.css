@@ -1,0 +1,85 @@
+.clearfix{
+    clear: both;
+}
+.area-select input{
+    position: relative;
+    z-index:1;
+}
+.area-select input.as-hover{
+    border-bottom:0;
+}
+.as-linkle{
+    cursor:pointer;
+}
+.as-ctn{
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    border: solid 1px #eee;
+    overflow-y: auto;
+    padding: 15px;
+    background: #fff;
+    -moz-box-shadow: 0 0 5px #ddd;
+    -webkit-box-shadow: 0 0 5px #ddd;
+    box-shadow: 0 0 5px #ddd;
+    margin-top: -1px;
+}
+.as-tabs{
+    width: 100%;
+    height: 25px;
+    float: left;
+    border-bottom: 2px solid #edd28b;
+    overflow: visible;
+}
+.as-tabs-item{
+    position: relative;
+    float: left;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 21px 1px 11px;
+    margin-right: 3px;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    color: #005AA0;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.as-tabs-item-current{
+    height: 25px;
+    background-color: #fff;
+    border: 2px solid #edd28b;
+    border-bottom: 0;
+    padding: 0 20px 0 10px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #000;
+}
+.as-content{
+    padding-top:5px;
+}
+.as-ctn{
+    display: none;
+}
+.as-hover .as-ctn{
+    display: block;
+}
+.as-content li{
+    float: left;
+    width: 80px;
+    padding: 2px 0 2px 15px;
+    clear: none;
+}
+.as-content li a{
+    color:#666;
+    padding:2px 4px;
+}
+.as-content li a:hover{
+    color:#FFF;
+    background-color: #005AA0;
+}
+.as-hidden{
+    display: none;
+}

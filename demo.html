@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery-addressselect</title>
+    <link rel="stylesheet" href="jquery-addressselect.css">
+    <style>
+        body{
+            font-size: 12px;
+        }
+        .container{
+            width: 1200px;
+            margin:50px auto;
+        }
+        ul{
+            margin:0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="area-select">
+
+            </div>
+        </form>
+
+
+    </div>
+    <script src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery-addressselect.js"></script>
+    <script >
+        $(".area-select").arealikeselect({
+            initData:[{id:2,name:"ttt"},{id:3,name:"ggg"}],
+            loadData:function(selectedData,callback){//selectedData={id:10,name:"ee"};
+                //use selectedData to queryajax
+//                ajax
+//                success:function()
+                callback([{id:2,name:"ttt"},{id:3,name:"ggg"}]);
+                //callback(null) or callback([]) to stop choose to trigger onok function
+            },
+            onok:function(selectedDatas){
+                alert(JSON.stringify(selectedDatas));
+            },
+            type:"input",//type 分为link 和 input两种
+            linktext:"请选择收货地区"
+
+        });
+    </script>
+</body>
+</html>
