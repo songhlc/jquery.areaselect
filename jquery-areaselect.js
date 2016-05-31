@@ -57,7 +57,7 @@
         function parseItemTemplate(datalist){
             var template = '';
             for(var i=0;i<datalist.length;i++){
-                   template+='<li><a href="javascript:void(0)" data-id="'+datalist[i].id+'">'+datalist[i].name+'</a></li>';
+                template+='<li><a href="javascript:void(0)" data-id="'+datalist[i].id+'">'+datalist[i].name+'</a></li>';
             }
 
             return '<ul>'+template+'</ul>';
