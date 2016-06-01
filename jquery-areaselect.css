@@ -76,9 +76,11 @@
 }
 .as-content li{
     float: left;
-    width: 80px;
-    padding: 2px 0 2px 15px;
+    width: 100px;
+    padding: 5px 0 5px 20px;
     clear: none;
+    min-height: 26px;
+    text-align: center;
 }
 .as-content li a{
     color:#666;

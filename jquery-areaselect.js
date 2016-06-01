@@ -159,7 +159,7 @@
                 if(settings.initData.keyid){
                     settings.initData =formatData(settings.initData.keyid,settings.initData.keyname,settings.initData.data);
                 }
-                var linkelement = settings.type=="link"?'<a class="as-linkle">'+settings.linktext+'</a>':'<input placeholder="'+settings.linktext+'" class="as-linkle '+settings.inputCls+'" type="text">';
+                var linkelement = settings.type=="link"?'<a class="as-linkle">'+settings.linktext+'</a>':'<input disabled="disabled" placeholder="'+settings.linktext+'" class="as-linkle '+settings.inputCls+'" type="text">';
                 var tpl = linkelement+
                     '<div class="as-ctn">'+
                     '<div class="as-tabs">'+
