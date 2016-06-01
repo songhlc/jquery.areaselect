@@ -82,26 +82,26 @@
                         //    element.find("input").val(selectedDatas.fullname);
                         //    return
                         //}
-                        $(".as-content ul").each(function(i){
+                        element.find(".as-content ul").each(function(i){
                             if(i>index){
                                 $(this).addClass("j-remove");
                             }
                         });
-                        $(".as-tabs a").each(function(i){
+                        element.find(".as-tabs a").each(function(i){
                             if(i>index){
                                 $(this).addClass("j-remove");
                             }
                         });
-                        $(".area-select .j-remove").remove();
+                        element.find(".j-remove").remove();
                         //如果有数据
                         //默认选中
-                        $(".as-tabs-item").removeClass("as-tabs-item-current");
-                        $(".as-content>ul").addClass("as-hidden");
-                        $(".as-tabs a").eq(index).html($(this).html());
+                        element.find(".as-tabs-item").removeClass("as-tabs-item-current");
+                        element.find(".as-content>ul").addClass("as-hidden");
+                        element.find(".as-tabs a").eq(index).html($(this).html());
                         //添加tab
-                        $(".as-tabs").append(parseTabTemplate(selectedData));
+                        element.find(".as-tabs").append(parseTabTemplate(selectedData));
                         //添加ctn
-                        $(".as-content").append(parseItemTemplate(datalist));
+                        element.find(".as-content").append(parseItemTemplate(datalist));
                         pushSelectedData(index,selectedData);
                     }
                     else{
@@ -115,8 +115,8 @@
             });
             element.delegate(".as-tabs a","click",function() {
                 var index = $(this).index();
-                $(".as-tabs-item").removeClass("as-tabs-item-current").eq(index).addClass("as-tabs-item-current");
-                $(".as-content ul").addClass("as-hidden").eq(index).removeClass("as-hidden");
+                element.find(".as-tabs-item").removeClass("as-tabs-item-current").eq(index).addClass("as-tabs-item-current");
+                element.find(".as-content ul").addClass("as-hidden").eq(index).removeClass("as-hidden");
             });
             //定时器
             var hovertimeout;
