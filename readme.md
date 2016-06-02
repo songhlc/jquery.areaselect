@@ -34,7 +34,9 @@
     一个小例子:
 
     $("#areabelong").areaselect({
+        //默认第一页签的数据
         initData:{keyid:"ProID",keyname:"ProName",data:province},
+        //点击节点时的加载函数和callback
         loadData:function(selectedData,callback,index){
             if(index ==0){
                 viewModel.province_code(selectedData.id);
@@ -48,8 +50,8 @@
                 viewModel.county_code(selectedData.id);
                 callback(null);
             }
-
         },
+        //当调用callback(null)之后会触发onok方法,返回选中的id集合 name集合 fullname
         onok:function(selectedDatas){
             viewModel.province_code(selectedDatas.ids[0]);
             viewModel.areafullname(selectedDatas.fullname);
